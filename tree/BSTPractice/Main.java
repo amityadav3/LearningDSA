@@ -30,6 +30,9 @@ public class Main {
         System.out.println();
         System.out.println(intTree.find(222));
 
+        intTree.delete(255);
+        System.out.println("Inorder Traversal: ");
+        intTree.traverseInorder();
 
     }
 }

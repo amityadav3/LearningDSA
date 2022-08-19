@@ -41,5 +41,28 @@ public class Tree {
         else return root.getMax();
     }
 
+    public void delete(int data) {
+        root = delete(root, data);
+    }
 
+    private TreeNode delete(TreeNode subtreeRoot, int data) {
+        if(subtreeRoot == null) return null;
+
+        if(data < subtreeRoot.getValue()){
+            subtreeRoot.setLeftChild(delete(subtreeRoot.getLeftChild(), data));
+        } else if (data > subtreeRoot.getValue()) {
+            subtreeRoot.setRightChild(delete(subtreeRoot.getRightChild(), data));
+        } else{
+            if(subtreeRoot.getLeftChild() == null){
+                return subtreeRoot.getRightChild();
+            } else if (subtreeRoot.getRightChild() == null) {
+                return subtreeRoot.getLeftChild();
+            }else {
+                // Case: 0,1 children
+                subtreeRoot.setValue(subtreeRoot.getRightChild().getMin());
+                subtreeRoot.setRightChild(delete(subtreeRoot.getRightChild(), subtreeRoot.getValue()));
+            }
+        }
+        return subtreeRoot;
+    }
 }

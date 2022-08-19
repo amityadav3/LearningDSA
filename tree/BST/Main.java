@@ -28,5 +28,10 @@ public class Main {
         System.out.println();
         System.out.println("Max Value : "+intTree.getMax());
 
+        System.out.println();
+
+        intTree.delete(15);
+        intTree.traverseInorder();
+        System.out.println();
     }
 }
