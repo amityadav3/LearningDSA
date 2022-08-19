@@ -1,0 +1,17 @@
+                                              Binary Tree
+
+Binary search tree consist of 0,1,2 nodes at max
+it has leaf nodes, Edges and root
+Complete binary tree, Full binary tree, Incomplete binary tree
+
+
+Binary Search tree:
+Can perform insertion, deletion and retrievels in (log n) time
+The left child always has smaller values than his parents
+The right child always has greater values than his parents
+left < parent < right   because of that it's easier to do searching called binary search.
+
+Level
+Preorder
+Inorder
+Postorder
