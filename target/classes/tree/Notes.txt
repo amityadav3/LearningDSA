@@ -12,6 +12,6 @@ The right child always has greater values than his parents
 left < parent < right   because of that it's easier to do searching called binary search.
 
 Level
-Preorder
-Inorder
-Postorder
+Preorder    root -> left -> right
+Inorder     left -> root -> right
+Postorder   left -> right -> root
